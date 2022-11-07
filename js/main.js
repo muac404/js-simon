@@ -35,7 +35,7 @@ const number = document.createElement("div");
 number.innerHTML = numberArray
 container.append(number)
 
-const timer = 3
+const timer = 30
 // setTimeout(function(){
 //     number.classList.add(".d-none")
 // }, 3000)
