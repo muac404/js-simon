@@ -37,11 +37,11 @@ const number = document.createElement("div");
 number.innerHTML = numberArray
 container.append(number)
 
-setTimeout(function(){
-    number.classList.add(".d-none")
-}, 3000)
+// setTimeout(function(){
+//     number.classList.add(".d-none")
+// }, 3000)
 
-
+console.log(numberArray)
 
 const array2 = []
 
@@ -51,5 +51,15 @@ for (let i = 0; i < 5; i++) {
     array2.push(userNumber)
 }
 
-console.log(numberArray, array2)
+
+const numeriIndovinati = []
+const numeriNonIndovinati = []
+
+if (numberArray.includes (array2[i])) {
+    numeriIndovinati.push((array2[i]))
+} else {
+    numeriNonIndovinati.push((array2[i]))
+}
+
+console.log(numberArray, array2, numeriIndovinati)
 
