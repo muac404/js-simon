@@ -8,6 +8,10 @@ function getRndInteger(min, max) {
   }
 
 
+
+function displaynone(){
+    number.classList.add(".d-none")
+}
 // MAIN
 
 
@@ -26,9 +30,26 @@ while (numberArray.length < 5) {
     i++; 
 }
 
-console.log(numberArray)
+
 const container = document.getElementById("container")
 
-const boardNumber = document.createElement("div");
-boardNumber.innerHTML = numberArray
-container.append(boardNumber)
+const number = document.createElement("div");
+number.innerHTML = numberArray
+container.append(number)
+
+setTimeout(function(){
+    number.classList.add(".d-none")
+}, 3000)
+
+
+
+const array2 = []
+
+
+for (let i = 0; i < 5; i++) {
+    const userNumber = Number(prompt("Inserisci un numero da 1 a 100"));
+    array2.push(userNumber)
+}
+
+console.log(numberArray, array2)
+
