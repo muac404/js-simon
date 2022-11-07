@@ -56,7 +56,7 @@ setTimeout(function(){
         } 
     }
     if (numeriIndovinati.length > 0){
-        alert("Hai indovinato")
+        alert(`Hai indovinato ${numeriIndovinati.length} numeri, ${numeriIndovinati}`)
     } else {
         alert("Non hai indovinato")
     }
