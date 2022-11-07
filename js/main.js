@@ -9,9 +9,7 @@ function getRndInteger(min, max) {
 
 
 
-function displaynone(){
-    number.classList.add(".d-none")
-}
+
 // MAIN
 
 
@@ -37,29 +35,48 @@ const number = document.createElement("div");
 number.innerHTML = numberArray
 container.append(number)
 
+const timer = 3
 // setTimeout(function(){
 //     number.classList.add(".d-none")
 // }, 3000)
 
-console.log(numberArray)
+setTimeout(function(){
+    container.remove();
+    
+    
+}, timer * 1000)
 
-const array2 = []
+setTimeout(function(){
+    const numeriIndovinati = [];
+    for (let i = 0; i < 5; i++) {
+        
+        const userNumber = Number(prompt("Inserisci un numero da 1 a 100"));
+        if (numberArray.includes (userNumber)) {
+            numeriIndovinati.push((userNumber))
+        } 
+    }
+    if (numeriIndovinati.length > 0){
+        alert("Hai indovinato")
+    } else {
+        alert("Non hai indovinato")
+    }
+}, (timer + 1) * 1000)
 
 
-for (let i = 0; i < 5; i++) {
-    const userNumber = Number(prompt("Inserisci un numero da 1 a 100"));
-    array2.push(userNumber)
-}
+
+// const array2 = []
 
 
-const numeriIndovinati = []
-const numeriNonIndovinati = []
 
-if (numberArray.includes (array2[i])) {
-    numeriIndovinati.push((array2[i]))
-} else {
-    numeriNonIndovinati.push((array2[i]))
-}
 
-console.log(numberArray, array2, numeriIndovinati)
+
+// const numeriNonIndovinati = []
+
+// if (numberArray.includes (array2[i])) {
+//     numeriIndovinati.push((array2[i]))
+// } else {
+//     numeriNonIndovinati.push((array2[i]))
+// }
+
+
 
